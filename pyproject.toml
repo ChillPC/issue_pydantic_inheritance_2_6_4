@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "issue_pydantic"
+version = "0.1.0"
+description = ""
+authors = ["Rémi Teissier <rteissier.code@chillpc.fr>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+pydantic = "=2.6.4"
+mypy = "^1.9.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+
+[tool.mypy]
+packages="issue_pydantic"
+strict = true
+implicit_reexport = true
+ignore_missing_imports = true
+follow_imports = "silent"
+plugins = "pydantic.mypy"
+
